@@ -159,6 +159,28 @@
    text-align: center;
    color: white;
  }
+
+ @media (max-width: 768px) {
+    header {
+      background-size: cover, 100vh; /* Ensure the background image does not shrink below 110vh */
+      background-position: center;
+    }
+    header .header-content {
+      position: absolute;
+      top: 75%;
+      -webkit-transform: translateY(90%);
+      -ms-transform: translateY(90%);
+      transform: translateY(90%);
+      padding: 0 50px;
+    }
+    header .header-content .header-content-inner h1 {
+      font-size: 18px; /* Adjust font size for h1 */
+    }
+    header .header-content .header-content-inner h3 {
+      font-size: 18px; /* Adjust font size for h3 */
+    }
+ }
+ 
  header .header-content {
    position: relative;
    text-align: center;
@@ -188,6 +210,7 @@
    margin-bottom: 50px;
  }
  
+@media (min-width: 768px) {
    header {
      min-height: 100%;
    }
@@ -213,7 +236,7 @@
      margin-left: auto;
      margin-right: auto;
    }
- 
+}
  .section-heading {
    margin-top: 0;
  }
@@ -464,9 +487,53 @@
  @media (max-width: 768px) {
     #imageCarousel {
         position: relative;
-        top: 150px; /* Adjust as needed */
+        top: -350px; /* Adjust as needed */
         width: 80vw; /* Adjust width for smaller screens */
         max-width: 450px; /* Adjust maximum width */
         left: 50%; /* Center horizontally */
     }
  }
+
+
+ @media (max-width: 936px) and (orientation: landscape) {
+    header {
+        background-size: cover; /* Ensure the background image covers the entire header */
+        background-position: center center; /* Center the background image */
+        height: 100vh; /* Ensure the header takes up the full viewport height */
+    }
+    header .header-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start; /* Align items to the start (left) */
+      align-items: center;
+      padding: 0 50px;
+      position: relative;
+      top: 0;
+      transform: none;
+      width: 50%; /* Set width to 50% */
+    }
+    header .header-content .left-half {
+      width: 100%; /* Full width for left half */
+      padding-right: 25px; /* Add some padding to the right */
+    }
+    header .header-content .right-half {
+      display: none; /* Hide the right half */
+    }
+    header .header-content .header-content-inner h1 {
+      font-size: 24px; /* Adjust font size for h1 */
+      margin-top: 30%; /* Add margin to bring h1 down */
+    }
+    header .header-content .header-content-inner h3 {
+      font-size: 18px; /* Adjust font size for h3 */
+      margin-top: 10%; /* Add margin to bring h1 down */
+    }
+    #imageCarousel {
+        top: -150px; /* Adjust as needed */
+        width: 40vw; /* Adjust the width of the carousel */
+        height: auto; /* Adjust the height of the carousel */
+        max-width: 40%; /* Ensure the carousel doesn't exceed the viewport */
+        left: 55%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        transform: translateY(-50%); /* Center vertically */
+    }
+  }
