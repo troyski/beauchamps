@@ -520,20 +520,38 @@
       display: none; /* Hide the right half */
     }
     header .header-content .header-content-inner h1 {
-      font-size: 24px; /* Adjust font size for h1 */
-      margin-top: 30%; /* Add margin to bring h1 down */
+      font-size: 22px; /* Adjust font size for h1 */
+      margin-top: 25%; /* Add margin to bring h1 down */
     }
     header .header-content .header-content-inner h3 {
       font-size: 18px; /* Adjust font size for h3 */
-      margin-top: 10%; /* Add margin to bring h1 down */
+      margin-top: 1%; /* Add margin to bring h1 down */
     }
     #imageCarousel {
-        top: -150px; /* Adjust as needed */
+        top: -125px; /* Adjust as needed */
         width: 40vw; /* Adjust the width of the carousel */
         height: auto; /* Adjust the height of the carousel */
         max-width: 40%; /* Ensure the carousel doesn't exceed the viewport */
         left: 55%; /* Center horizontally */
         transform: translateX(-50%); /* Center horizontally */
         transform: translateY(-50%); /* Center vertically */
+    }
+    /* Ensure the navbar retains the same style as fullscreen but remains hidden or transparent */
+    .navbar {
+        background-color: transparent; /* Make the navbar transparent */
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove shadow */
+    }
+    .navbar-toggle {
+        border: none; /* Remove border */
+        background: none; /* Remove background */
+    }
+    .navbar-brand {
+        font-size: 24px; /* Adjust font size */
+        color: transparent; /* Make the brand text transparent */
+    }
+    .navbar-nav > li > a {
+        font-size: 16px; /* Adjust font size */
+        color: transparent; /* Make the nav links transparent */
     }
   }
